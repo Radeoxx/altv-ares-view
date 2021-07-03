@@ -12,9 +12,9 @@
                         max-height="150"
                         block
                     ></v-img>
-                    <v-btn @mouseup="beginAuth">Click Here to Authorize with Discord</v-btn>
+                    <v-btn @mouseup="beginAuth">Haga clic aquí para autorizar con Discord</v-btn>
                     <p class="mt-6" v-if="!errorMessage">
-                        A page will open up outside of your game and assist you with logging in.
+                        Se abrirá una página fuera del juego y te ayudará a iniciar sesión.
                     </p>
                     <p class="mt-6 light-blue--text text-h6 font-weight-black text-center" v-else>
                         {{ errorMessage }} <br />
@@ -32,11 +32,11 @@
                 <template v-if="!loading && waitingForAuth">
                     <div class="fadein d-flex flex-column align-content-center align-center justify-center">
                         <p>
-                            Tab out and check your browser to finish authentication. <br />If it failed try opening the
-                            window again. <a @mousedown="authAgain">Re-open Window.</a>
+                            Revise su navegador para finalizar la autenticación. <br />Si falla, intenta abrir
+                            ventana de nuevo. <a @mousedown="authAgain">Reintentar</a>
                         </p>
                         <template v-if="readyToFinish">
-                            <v-btn @mouseup="finishAuth">Finish Authorization</v-btn>
+                            <v-btn @mouseup="finishAuth">Continuar</v-btn>
                         </template>
                         <template v-else>
                             <div class="lds-ring">
@@ -48,7 +48,7 @@
                         </template>
                     </div>
                 </template>
-                <p class="context mt-6">Ares Discord Authentication - Written by <a @click="loadAthena">Stuyk</a></p>
+                <p class="context mt-6">Autenticación de Discord ARES - Escrito por <a @click="loadAthena">Stuyk</a></p>
             </v-container>
         </v-main>
     </v-app>
